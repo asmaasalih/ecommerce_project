@@ -24,7 +24,7 @@ class Product(models.Model):
 	category 	= models.ForeignKey(Category,related_name='product',on_delete=models.CASCADE)
 	name 		= models.CharField(max_length=200,db_index=True)
 	slug 		= models.SlugField(max_length=200,db_index=True)
-	Image 		= models.ImageField(upload_to='post_img/', default='post_img/default.png')
+	Image 		= models.ImageField()
 	weight      = models.FloatField(default=True)
 	caliber     = models.PositiveIntegerField(default=True)
 	description = models.TextField(blank=True)
