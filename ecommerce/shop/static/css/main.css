@@ -1,0 +1,146 @@
+body {
+	direction: rtl;
+	padding:0;
+	margin:0 auto;
+}
+table{
+	border-collapse: collapse;
+	width: 80%;
+	margin:100px auto 20px auto;
+}
+
+thead{
+	background-color:#5892B9;
+	display: inline-block;
+	margin: auto;
+	width: 100%;
+	padding: 10px;
+}
+thead th{
+	padding:10px;
+	color:#fff;
+	text-align: center;
+	width:150px;
+	}
+
+tbody {
+	display: inline-block;
+	width:100%;
+}
+tbody td{
+	padding:10px;
+	width:150px;
+}
+tbody .total{
+	color: #fff;
+	background-color:#5892B9;
+	width:100%;
+	display: inline-table;
+	
+}
+tbody .total td{
+	width:50%;
+}
+tbody .total .num{
+	float:left;
+	margin-left: 100px;
+}
+.neg{
+color:red;
+}
+.text-right a {
+	border: none;
+	border-radius: 10px;
+	margin: auto;
+	display: inline-block;
+}
+.text-right :first-child{
+	padding:10px;
+	text-decoration: none;
+	background-color:#F5F5F5;
+
+}
+.btn {
+	padding:10px;
+	text-decoration: none;
+	background-color:rgb(73, 162, 221); 
+	color:#fff;
+	border:none;
+	border-radius: 10px;
+}
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+.check {
+	margin-bottom: 60px;
+}
+.order-info{
+	background-color:rgb(186, 207, 209);
+	float: right;
+	margin-right: 50px;
+	margin-top: 100px;
+	padding: 20px;
+	border-bottom: 2px solid rgb(3, 23, 37);
+	width:40%;
+}
+
+.order-info ul li span{
+	float: left;
+	list-style-type: none;
+	margin-top: 50px;
+	
+}
+.order-info p{
+	float: left;
+	font-weight: bold;
+}
+.order_form{
+	direction: rtl;
+	padding:10px;
+	margin-top: 50px;
+	margin-right:20px;
+	width:95%;
+}
+.order_form label{
+	display: block;
+}
+.order_form input,button{
+	width:50%;
+	border:none;
+	padding:10px;
+	background-color:#F3F3F3;
+}
+.order_form button{
+	background-color:#5892B9;
+	color:#fff;
+	width:27%;
+	border:none;
+	padding:10px;
+}
+.pds{
+	margin-top: 100px;
+	margin-right:60px;
+}
+.center-div{
+	border-radius: 10px;
+	width:80%;
+	padding:30px;
+	margin:100px auto;
+	background-color: #f3f3f3;
+}
+
+.divo {
+		width:70%;
+	margin:0 auto;
+	margin-bottom:10px; 
+}
+.gray{
+	background-color: #eee;
+	display: inline-table;
+	width:100%;
+	margin-bottom: 8px;
+}
+.gray2{
+	display: inline-table;
+	width:100%;
+	
+}
