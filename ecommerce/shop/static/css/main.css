@@ -2,6 +2,7 @@ body {
 	direction: rtl;
 	padding:0;
 	margin:0 auto;
+	font-family: 'Cairo', sans-serif;
 }
 table{
 	border-collapse: collapse;
@@ -32,7 +33,7 @@ tbody td{
 	width:150px;
 }
 tbody .total{
-	color: #fff;
+	color: rgb(63, 9, 9);
 	background-color:#5892B9;
 	width:100%;
 	display: inline-table;
@@ -143,4 +144,9 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 	display: inline-table;
 	width:100%;
 	
+}
+.payment {
+	margin-top: 200px;
+	margin-left: 100px;
+	margin-bottom: 100px;
 }

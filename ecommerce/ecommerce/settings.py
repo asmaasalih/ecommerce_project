@@ -39,8 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'shop.apps.ShopConfig',
     'cart.apps.CartConfig',
-    'orders.apps.OrdersConfig'
-
+    'orders.apps.OrdersConfig',
+    'payment.apps.PaymentConfig',
+    'paypal.standard.ipn',
 ]
 
 MIDDLEWARE = [
@@ -127,3 +128,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 CART_SESSION_ID = 'cart'
+
+PAYPAL_TEST = True
+
+PAYPAL_RECEIVER_EMAIL = 'aemam383@gmail.com'
