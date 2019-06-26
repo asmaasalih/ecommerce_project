@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}انشاء حساب{% endblock %}
+
+{% block content %}
+<div class="signup">
+<!--
+  <h2>انشاء حساب</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Sign up</button>
+  </form>
+</div> -->
+<div class="form-style-10">
+        <h1>إنشاء حساب</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="section"><span></span>الاسم والعنوان</div>
+            <div class="inner-wrap">
+                <label>الاسم كامل <input type="text" name="field1" /></label>
+                <label>العنوان <textarea name="field2"></textarea></label>
+            </div>
+        
+            <div class="section"><span>2</span>البريدالالكتروني والهاتف</div>
+            <div class="inner-wrap">
+                <label>البريد الالكتروني <input type="email" name="field3" /></label>
+                <label>رقم الهاتف<input type="text" name="field4" /></label>
+            </div>
+        
+            <div class="section"><span>3</span>كلمة المرور</div>
+                <div class="inner-wrap">
+                <label>كلمة المرور<input type="password" name="field5" /></label>
+                <label>تأكيد كلمة المرور <input type="password" name="field6" /></label>
+            </div>
+            <div class="button-section">
+             <input type="submit" name="Sign Up" value="تأكيد"/>
+             <span class="privacy-policy">
+             <input type="checkbox" name="field7">You agree to our Terms and Policy. 
+             </span>
+            </div>
+        </form>
+        </div> 
+    </div>    
+{% endblock %}

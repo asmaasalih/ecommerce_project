@@ -23,7 +23,7 @@
 		
 			  <!--First slide-->
 			  <div class="carousel-item active">
-				<div class="view" style="background-image: url('https://images.pexels.com/photos/691046/pexels-photo-691046.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'); background-repeat: no-repeat; background-size: cover;">
+				<div class="view" style="background-image: url('https://scontent.ffjr1-2.fna.fbcdn.net/v/t1.15752-9/65133784_737737190000262_4902915076320657408_n.png?_nc_cat=104&_nc_oc=AQlborTaU4bWkgtmyPsZL0KAUxVjP8LC9EUVKhmpA1Y2G9oDxRxT4p2wE0_Lh_k9ZYg&_nc_ht=scontent.ffjr1-2.fna&oh=856fabcef6cc1cae531b57c30f02b443&oe=5DC72B7D'); background-repeat: no-repeat; background-size: cover;">
 		
 				  <!-- Mask & flexbox options-->
 				  <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
@@ -31,7 +31,7 @@
 					<!-- Content -->
 					<div class="text-center white-text mx-5 wow fadeIn">
 					  <h1 class="mb-4">
-						<strong>Welcome to our shop</strong>
+						<strong>مرحبا بيكم في شركة رواد الأحتراف</strong>
 					  </h1>
 		
 					  <p>
@@ -59,7 +59,7 @@
 		
 			  <!--Second slide-->
 			  <div class="carousel-item">
-				<div class="view" style="background-image: url('https://images.pexels.com/photos/415350/pexels-photo-415350.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=650&w=940'); background-repeat: no-repeat; background-size: cover;">
+				<div class="view" style="background-image: url('https://scontent.ffjr1-4.fna.fbcdn.net/v/t1.15752-9/65391084_415673965698573_4388226978914762752_n.png?_nc_cat=111&_nc_oc=AQl0DmSrTTi2yD8YV12X8VWUZRV2LLGD7T9AHji4KcUWQC5R23ZSEXI4rFYVVVoLYTk&_nc_ht=scontent.ffjr1-4.fna&oh=8b95975ec421b0c6a1220048e14a1e01&oe=5DC323E6'); background-repeat: no-repeat; background-size: cover;">
 		
 				  <!-- Mask & flexbox options-->
 				  <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
@@ -95,7 +95,7 @@
 		
 			  <!--Third slide-->
 			  <div class="carousel-item">
-				<div class="view" style="background-image: url('https://images.pexels.com/photos/1661003/pexels-photo-1661003.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'); background-repeat: no-repeat; background-size: cover;">
+				<div class="view" style="background-image: url('https://scontent.ffjr1-4.fna.fbcdn.net/v/t1.15752-9/65182053_353684445206353_7870378886742147072_n.png?_nc_cat=111&_nc_oc=AQmiBdReOVe1gzatRlZ3DH3d143S_F7EwMObE5m-PULhziHFaDXPHm_1mhf6SKZCf9s&_nc_ht=scontent.ffjr1-4.fna&oh=908edb45d8ca225dd6d6087f1fbefae6&oe=5D8D84A2'); background-repeat: no-repeat; background-size: cover;">
 		
 				  <!-- Mask & flexbox options-->
 				  <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
@@ -174,18 +174,19 @@
 							{% endif %}>
 						<a href="{% url 'shop:product_list' %}">الكل</a>	
 						</li>
-				  </ul>
-				  {% for cat in categories %}
-				  <ul class="navbar-nav mr-auto">
-					  	<li 
+				</ul>
+				{% if not sub_categories %}
+				  	{% for cat  in categories %}
+				       <ul class="navbar-nav mr-auto">
+						   <li 
 					  		{% if category.slug == cat.slug %}
 					  			class = "selected"	
-				  			{% endif %}
-						  >
-							<a href="{{cat.get_absolute_url}}">{{cat.name}}</a> 
+							{% endif %}>
+							<a href="{{cat.slug}}">{{cat.name}}</a>  
 						</li>		   
 				  </ul>
 				  {% endfor %}
+				  {% endif %}
 
 				  <!-- Links -->
 		
@@ -196,15 +197,33 @@
 				  </form>
 				</div>
 				<!-- Collapsible content -->
-			  </nav>
-			  <!--/.Navbar-->
-			  <h1>
-					{% if category %} 
-						{{category.name}}
-					{% else %}
-						الكل	
-					{% endif %}
-				</h1>
+			</nav>
+			<!--/.Navbar-->
+			<h1>
+				{% if category %} 
+					{{category.name}}
+				{% else %}
+					الكل	
+				{% endif %}
+			</h1>
+			<ul class="breadcrumbs">
+				<li><a href="/">Home</a></li>
+				{% for slug,name in breadcrumbs %}
+					<li><a href="/category/{{ slug }}">{{ name }}</a></li>
+				{% endfor %}
+			</ul>
+			<div class="dropdown">
+					<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					الأصناف
+					</a>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+					  <a class="dropdown-item" href="#">Action</a>
+					  <a class="dropdown-item" href="#">Another action</a>
+					  <a class="dropdown-item" href="#">Something else here</a>
+					</div>
+				  </div>
+				  
+				   
 
 	<section class="text-center mb-4">
 
