@@ -274,5 +274,6 @@ a {
     height: 100px;
   }
   .search:hover{
-      background-color: #eb9d0c;
+      background-color: #5bd3d3;
+      border:  #5bd3d3;
   }
