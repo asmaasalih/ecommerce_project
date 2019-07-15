@@ -3,16 +3,21 @@ from shop.models import Product
 from decimal import Decimal
 
 # Create your models here.
-class order(models.Model):
+class order(models.Model): 
+    Pay_Choices =(
+        ('1','Cash On Delivery'),
+        ('2','PayPal'), 
+    )
     first_name 	= models.CharField(max_length=50)
     last_name	= models.CharField(max_length=50)
     email 		= models.EmailField()
     address 	= models.CharField(max_length=250)
-    postal_code = models.CharField(max_length=50)
     city 		= models.CharField(max_length=100)
+    region      = models.CharField(max_length=100,default='makah')
     created 	= models.DateTimeField(auto_now_add=True)
     updated 	= models.DateTimeField(auto_now=True)
     paid 		= models.BooleanField(default=False)
+    pay_method  = models.CharField(max_length=100, choices=Pay_Choices,null=True,default='Cash On ..')
 
 
     class Meta:
