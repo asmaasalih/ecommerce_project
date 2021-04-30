@@ -42,7 +42,7 @@ South==1.0.2
 sqlparse==0.3.0
 stripe==2.30.1
 suds-jurko==0.6
-urllib3==1.25.3
+urllib3==1.25.8
 virtualenv==16.1.0
 virtualenv-clone==0.5.3
 Werkzeug==0.15.2
